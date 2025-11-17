@@ -1,0 +1,111 @@
+(.venv) PS D:\project\python\pyTorchTest\homework\week02-2> python week02-2-v2.py --img_root E:\BaiduNetdiskDownload\CV-车辆检测\VRID\image --train_txt re_id_1000_train.txt --test_txt  re_id_1000_test.txt --batch_size 32 --epochs 20 --lr 0.001
+Using device: cuda
+Train samples: 4500, Val samples: 500, Test samples: 5000
+
+Epoch [1/20]
+Train Loss: 1.0296, Train Acc: 0.6309
+Val   Loss: 0.7571, Val   Acc: 0.7080
+
+Epoch [2/20]
+Train Loss: 0.3272, Train Acc: 0.8876
+Val   Loss: 0.5125, Val   Acc: 0.8440
+
+Epoch [3/20]
+Train Loss: 0.1932, Train Acc: 0.9391
+Val   Loss: 0.1513, Val   Acc: 0.9500
+
+Epoch [4/20]
+Train Loss: 0.1212, Train Acc: 0.9607
+Val   Loss: 0.3311, Val   Acc: 0.8860
+
+Epoch [5/20]
+Train Loss: 0.1001, Train Acc: 0.9687
+Val   Loss: 0.1232, Val   Acc: 0.9680
+
+Epoch [6/20]
+Train Loss: 0.1252, Train Acc: 0.9613
+Val   Loss: 0.0567, Val   Acc: 0.9840
+
+Epoch [7/20]
+Train Loss: 0.0561, Train Acc: 0.9827
+Val   Loss: 0.0793, Val   Acc: 0.9740
+
+Epoch [8/20]
+Train Loss: 0.0408, Train Acc: 0.9884
+Val   Loss: 0.0282, Val   Acc: 0.9940
+
+Epoch [9/20]
+Train Loss: 0.0216, Train Acc: 0.9942
+Val   Loss: 0.0254, Val   Acc: 0.9920
+
+Epoch [10/20]
+Train Loss: 0.0136, Train Acc: 0.9973
+Val   Loss: 0.0109, Val   Acc: 0.9960
+
+Epoch [11/20]
+Train Loss: 0.0125, Train Acc: 0.9973
+Val   Loss: 0.0191, Val   Acc: 0.9960
+
+Epoch [12/20]
+Train Loss: 0.0122, Train Acc: 0.9964
+Val   Loss: 0.0136, Val   Acc: 0.9980
+
+Epoch [13/20]
+Train Loss: 0.0084, Train Acc: 0.9982
+Val   Loss: 0.0069, Val   Acc: 0.9980
+
+Epoch [14/20]
+Train Loss: 0.0081, Train Acc: 0.9976
+Val   Loss: 0.0068, Val   Acc: 0.9980
+
+Epoch [15/20]
+Train Loss: 0.0056, Train Acc: 0.9984
+Val   Loss: 0.0133, Val   Acc: 0.9960
+
+Epoch [16/20]
+Train Loss: 0.0051, Train Acc: 0.9989
+Val   Loss: 0.0075, Val   Acc: 0.9980
+
+Epoch [17/20]
+Train Loss: 0.0052, Train Acc: 0.9989
+Val   Loss: 0.0102, Val   Acc: 0.9980
+
+Epoch [18/20]
+Train Loss: 0.0050, Train Acc: 0.9993
+Val   Loss: 0.0046, Val   Acc: 0.9980
+
+Epoch [19/20]
+Train Loss: 0.0039, Train Acc: 0.9993
+Val   Loss: 0.0041, Val   Acc: 0.9980
+
+Epoch [20/20]
+Train Loss: 0.0054, Train Acc: 0.9984
+Val   Loss: 0.0116, Val   Acc: 0.9980
+
+Best Val Acc: 0.9980
+
+Test  Loss: 0.0105, Test Acc: 0.9966
+✅ 测试集准确率 >= 80%，满足作业要求。
+Model saved to checkpoints/car_brand_resnet18_no_tv.pth
+
+(.venv) PS D:\project\python\pyTorchTest\homework\week02-2> python week02-2-v2-test.py --model checkpoints/car_brand_resnet18_no_tv.pth --image 4404000000002940357454.jpg
+Using device: cuda
+预测类别ID: 6
+预测品牌: 日产_轩逸 / Nissan_Sylphy
+置信度: 1.0000
+(.venv) PS D:\project\python\pyTorchTest\homework\week02-2> python week02-2-v2-test.py --model checkpoints/car_brand_resnet18_no_tv.pth --image 4404000000002947819012.jpg
+Using device: cuda
+预测类别ID: 4
+预测品牌: 大众_迈腾 / Volkswagen_Magotan
+置信度: 1.0000
+(.venv) PS D:\project\python\pyTorchTest\homework\week02-2> python week02-2-v2-test.py --model checkpoints/car_brand_resnet18_no_tv.pth --image 4404000000002942488737.jpg
+Using device: cuda
+预测类别ID: 0
+预测品牌: 丰田_凯美瑞 / Toyota_Camry
+置信度: 0.9994
+(.venv) PS D:\project\python\pyTorchTest\homework\week02-2> python week02-2-v2-test.py --model checkpoints/car_brand_resnet18_no_tv.pth --image tesla.jpg                 
+Using device: cuda
+预测类别ID: 5
+预测品牌: 奥迪_A4 / Audi_A4
+置信度: 0.3201
+(.venv) PS D:\project\python\pyTorchTest\homework\week02-2> 
