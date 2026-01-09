@@ -1,0 +1,93 @@
+D:\project\python\pyTorchTest\.venv\Scripts\python.exe D:\project\python\pyTorchTest\homework\week09-2\train_lora_q_lora.py
+D:\project\python\pyTorchTest\.venv\Lib\site-packages\huggingface_hub\file_download.py:143: UserWarning: `huggingface_hub` cache-system uses symlinks by default to efficiently store duplicated files but your machine does not support them in C:\Users\gggang\.cache\huggingface\hub\models--Qwen--Qwen2.5-Coder-0.5B. Caching files will still work but in a degraded version that might require more space on your disk. This warning can be disabled by setting the `HF_HUB_DISABLE_SYMLINKS_WARNING` environment variable. For more details, see https://huggingface.co/docs/huggingface_hub/how-to-cache#limitations.
+To support symlinks on Windows, you either need to activate Developer Mode or to run Python as an administrator. In order to activate developer mode, see this article: https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development
+  warnings.warn(message)
+正在加载 Qwen2.5-Coder 8bit 模型...
+The `load_in_4bit` and `load_in_8bit` arguments are deprecated and will be removed in the future versions. Please, pass a `BitsAndBytesConfig` object in `quantization_config` argument instead.
+trainable params: 1,081,344 || all params: 495,114,112 || trainable%: 0.2184
+Map: 100%|██████████| 2/2 [00:00<00:00, 116.72 examples/s]
+D:\project\python\pyTorchTest\homework\week09-2\train_lora_q_lora.py:126: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Trainer.__init__`. Use `processing_class` instead.
+  trainer = Trainer(
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'bos_token_id': None, 'pad_token_id': 151643}.
+开始训练 Qwen2.5-Coder LoRA...
+  0%|          | 0/3 [00:00<?, ?it/s]`use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+D:\project\python\pyTorchTest\.venv\Lib\site-packages\torch\_dynamo\eval_frame.py:838: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In version 2.5 we will raise an exception if use_reentrant is not passed. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  return fn(*args, **kwargs)
+D:\project\python\pyTorchTest\.venv\Lib\site-packages\bitsandbytes\autograd\_functions.py:123: UserWarning: MatMul8bitLt: inputs will be cast from torch.float32 to float16 during quantization
+  warnings.warn(f"MatMul8bitLt: inputs will be cast from {A.dtype} to float16 during quantization")
+100%|██████████| 3/3 [00:04<00:00,  1.51s/it]
+{'train_runtime': 4.5199, 'train_samples_per_second': 1.327, 'train_steps_per_second': 0.664, 'train_loss': 13.770820617675781, 'epoch': 3.0}
+训练完成，保存模型...
+
+进程已结束，退出代码为 0
+
+
+D:\project\python\pyTorchTest\.venv\Scripts\python.exe D:\project\python\pyTorchTest\homework\week09-2\compare_before_after.py
+PROMPT: 写一个 Python 冒泡排序函数
+【原始模型】
+Setting `pad_token_id` to `eos_token_id`:151643 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:151643 for open-end generation.
+写一个 Python 冒泡排序函数，用于对一个列表进行排序。
+当然可以！以下是一个简单的 Python 冒泡排序函数，用于对一个列表进行排序：
+
+```python
+def bubble_sort(arr):
+    n = len(arr)
+    for i in range(n):
+        # 标记是否发生了交换
+        swapped = False
+        for j in range(0, n-i-1):
+            if arr[j] > arr[j+1]:
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+                swapped = True
+        # 如果没有发生交换，说明列表已经
+【LoRA 微调后】
+写一个 Python 冒泡排序函数，用于对一个列表进行排序。
+当然可以！以下是一个简单的 Python 冒泡排序函数，用于对一个列表进行排序：
+
+```python
+def bubble_sort(arr):
+    n = len(arr)
+    for i in range(n):
+        # 标记是否发生了交换
+        swapped = False
+        for j in range(0, n-i-1):
+            if arr[j] > arr[j+1]:
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+                swapped = True
+        # 如果没有发生交换，说明列表已经
+============================================================
+PROMPT: 实现一个判断回文字符串的函数
+【原始模型】
+Setting `pad_token_id` to `eos_token_id`:151643 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:151643 for open-end generation.
+实现一个判断回文字符串的函数，要求时间复杂度为O(n)，空间复杂度为O(1)。
+当然可以！以下是一个使用Python实现的简单回文字符串判断函数：
+
+```python
+def is_palindrome(s):
+    # 移除非字母数字字符
+    s = ''.join(filter(str.isalnum, s))
+
+    # 判断回文
+    return s == s[::-1]
+```
+
+这个函数首先使用`filter`函数去除字符串中的非字母数字字符，然后使用切片操作反转字符串，最后比较反转后的字符串是否与原始字符串相同，如果相同
+【LoRA 微调后】
+实现一个判断回文字符串的函数，要求时间复杂度为O(n)，空间复杂度为O(1)。
+当然可以！以下是一个使用Python实现的简单回文字符串判断函数：
+
+```python
+def is_palindrome(s):
+    # 移除非字母数字字符
+    s = ''.join(filter(str.isalnum, s))
+
+    # 判断回文
+    return s == s[::-1]
+```
+
+这个函数首先使用`filter`函数去除字符串中的非字母数字字符，然后使用切片操作反转字符串，最后比较反转后的字符串是否与原始字符串相同，如果相同
+============================================================
+
+进程已结束，退出代码为 0

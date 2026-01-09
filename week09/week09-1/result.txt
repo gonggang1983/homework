@@ -1,0 +1,29 @@
+(.venv) PS D:\project\python\pyTorchTest\homework\week09-1> python .\home_robot.py home.png hf_token
+[INFO] Loading LLaVA-NeXT on cuda
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 4/4 [00:00<00:00, 29.39it/s]
+[INFO] Model loaded successfully
+
+=== Scene Understanding ===
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+这张图片显示了一个现代化的家居空间，包括一个大型的床，一个圆形的垃圾桶，一个书架，一个植物，以及一些书和其他家居装饰。床上有一些家居装饰，如枕头和一些书。书架上有一些书和其他家居装饰。植物在书架的一边。垃圾桶在�����
+
+=== Object Grounding (Language-based) ===
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+在这张图片中，主要的物体有：
+
+1. 蓝色的沙发和椅子：2个
+2. 椅子：1个
+3. 书架：1个
+4. 花卉：1个
+5. 时钟：1个
+6. 窗帘：2个
+7. 地毯：1个
+8. 床：1个
+9. 书：1个
+10. 花卉杯：1个
+
+=== Visual Question Answering ===
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+在这个场景中，最重要的物体是蓝色的沙发。这是因为沙发是一个主要的家居用品，它是一个舒适的座位，可以用来放松、休息或者与家人和朋友一起聊天。它的位置在中间，也是整个房间的中心，因此它是整个房间的一个重要的元素。此外，沙发周围的其他家居用品，如书架、植
