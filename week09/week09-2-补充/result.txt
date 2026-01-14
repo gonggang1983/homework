@@ -1,0 +1,239 @@
+(base) root@instance-l7iadj57:~# cd /modeldata/test/
+(base) root@instance-l7iadj57:/modeldata/test# conda activate codealpaca
+(codealpaca) root@instance-l7iadj57:/modeldata/test# accelerate launch train_qlora_codealpaca.py
+You are using the default legacy behaviour of the <class 'transformers.models.llama.tokenization_llama.LlamaTokenizer'>. This is expected, and simply means that the `legacy` (previous) behavior will be used so nothing changes for you. If you want to use the new behaviour, set `legacy=False`. This should only be set if you understand what it means, and thoroughly read the reason why this was added as explained in https://github.com/huggingface/transformers/pull/24565 - if you loaded a llama tokenizer from a GGUF file you can ignore this message
+Loading checkpoint shards: 100%|███████████████████████████████████████████████████| 2/2 [00:10<00:00,  5.39s/it]
+trainable params: 16,777,216 || all params: 6,755,323,904 || trainable%: 0.2484
+{'loss': 1.8484, 'grad_norm': 0.14202846586704254, 'learning_rate': 0.00019856230031948884, 'epoch': 0.02}
+{'loss': 0.1817, 'grad_norm': 0.056461263447999954, 'learning_rate': 0.00019696485623003196, 'epoch': 0.03}
+{'loss': 0.1498, 'grad_norm': 0.05758899450302124, 'learning_rate': 0.0001953674121405751, 'epoch': 0.05}
+{'loss': 0.1474, 'grad_norm': 0.05023254454135895, 'learning_rate': 0.0001937699680511182, 'epoch': 0.06}
+{'loss': 0.16, 'grad_norm': 0.04867757856845856, 'learning_rate': 0.00019217252396166133, 'epoch': 0.08}
+{'loss': 0.1435, 'grad_norm': 0.07116024941205978, 'learning_rate': 0.00019057507987220448, 'epoch': 0.1}
+{'loss': 0.1405, 'grad_norm': 0.05584539845585823, 'learning_rate': 0.0001889776357827476, 'epoch': 0.11}
+{'loss': 0.1351, 'grad_norm': 0.05190632864832878, 'learning_rate': 0.00018738019169329076, 'epoch': 0.13}
+{'loss': 0.1375, 'grad_norm': 0.0557708777487278, 'learning_rate': 0.00018578274760383388, 'epoch': 0.14}
+{'loss': 0.1296, 'grad_norm': 0.05079665780067444, 'learning_rate': 0.00018418530351437703, 'epoch': 0.16}
+{'loss': 0.1305, 'grad_norm': 0.060494791716337204, 'learning_rate': 0.00018258785942492015, 'epoch': 0.18}
+{'loss': 0.1221, 'grad_norm': 0.047875676304101944, 'learning_rate': 0.00018099041533546325, 'epoch': 0.19}
+{'loss': 0.123, 'grad_norm': 0.04958285391330719, 'learning_rate': 0.0001793929712460064, 'epoch': 0.21}
+{'loss': 0.1257, 'grad_norm': 0.04882783442735672, 'learning_rate': 0.00017779552715654952, 'epoch': 0.22}
+{'loss': 0.1306, 'grad_norm': 0.049439553171396255, 'learning_rate': 0.00017619808306709267, 'epoch': 0.24}
+{'loss': 0.1263, 'grad_norm': 0.04803489148616791, 'learning_rate': 0.0001746006389776358, 'epoch': 0.26}
+{'loss': 0.1227, 'grad_norm': 0.046562228351831436, 'learning_rate': 0.00017300319488817894, 'epoch': 0.27}
+{'loss': 0.1237, 'grad_norm': 0.04353240877389908, 'learning_rate': 0.00017140575079872207, 'epoch': 0.29}
+{'loss': 0.1331, 'grad_norm': 0.04234357550740242, 'learning_rate': 0.0001698083067092652, 'epoch': 0.3}
+{'loss': 0.1277, 'grad_norm': 0.05317840352654457, 'learning_rate': 0.0001682108626198083, 'epoch': 0.32}
+{'loss': 0.128, 'grad_norm': 0.0507391057908535, 'learning_rate': 0.00016661341853035143, 'epoch': 0.34}
+{'loss': 0.1264, 'grad_norm': 0.04620761796832085, 'learning_rate': 0.00016501597444089458, 'epoch': 0.35}
+{'loss': 0.1234, 'grad_norm': 0.04164059832692146, 'learning_rate': 0.0001634185303514377, 'epoch': 0.37}
+{'loss': 0.1266, 'grad_norm': 0.049304284155368805, 'learning_rate': 0.00016182108626198086, 'epoch': 0.38}
+{'loss': 0.1264, 'grad_norm': 0.04870219528675079, 'learning_rate': 0.00016022364217252398, 'epoch': 0.4}
+{'loss': 0.1289, 'grad_norm': 0.04470941424369812, 'learning_rate': 0.0001586261980830671, 'epoch': 0.42}
+{'loss': 0.1249, 'grad_norm': 0.0508938804268837, 'learning_rate': 0.00015702875399361022, 'epoch': 0.43}
+{'loss': 0.1296, 'grad_norm': 0.044369589537382126, 'learning_rate': 0.00015543130990415335, 'epoch': 0.45}
+{'loss': 0.1327, 'grad_norm': 0.04527302458882332, 'learning_rate': 0.0001538338658146965, 'epoch': 0.46}
+{'loss': 0.1224, 'grad_norm': 0.03762517496943474, 'learning_rate': 0.00015223642172523962, 'epoch': 0.48}
+{'loss': 0.1257, 'grad_norm': 0.039145562797784805, 'learning_rate': 0.00015063897763578277, 'epoch': 0.5}
+{'loss': 0.1236, 'grad_norm': 0.04480753839015961, 'learning_rate': 0.0001490415335463259, 'epoch': 0.51}
+{'loss': 0.1329, 'grad_norm': 0.04307643324136734, 'learning_rate': 0.00014744408945686902, 'epoch': 0.53}
+{'loss': 0.1192, 'grad_norm': 0.04659426957368851, 'learning_rate': 0.00014584664536741214, 'epoch': 0.54}
+{'loss': 0.1234, 'grad_norm': 0.04256465658545494, 'learning_rate': 0.00014424920127795526, 'epoch': 0.56}
+{'loss': 0.1233, 'grad_norm': 0.03997394070029259, 'learning_rate': 0.0001426517571884984, 'epoch': 0.58}
+{'loss': 0.1222, 'grad_norm': 0.04977554827928543, 'learning_rate': 0.00014105431309904153, 'epoch': 0.59}
+{'loss': 0.1315, 'grad_norm': 0.04197286441922188, 'learning_rate': 0.00013945686900958468, 'epoch': 0.61}
+{'loss': 0.1301, 'grad_norm': 0.045013491064310074, 'learning_rate': 0.0001378594249201278, 'epoch': 0.62}
+{'loss': 0.124, 'grad_norm': 0.04455012083053589, 'learning_rate': 0.00013626198083067093, 'epoch': 0.64}
+{'loss': 0.125, 'grad_norm': 0.04684865102171898, 'learning_rate': 0.00013466453674121405, 'epoch': 0.66}
+{'loss': 0.1315, 'grad_norm': 0.0423286072909832, 'learning_rate': 0.00013306709265175718, 'epoch': 0.67}
+{'loss': 0.1195, 'grad_norm': 0.040620919317007065, 'learning_rate': 0.00013146964856230033, 'epoch': 0.69}
+{'loss': 0.1266, 'grad_norm': 0.04072757810354233, 'learning_rate': 0.00012987220447284345, 'epoch': 0.7}
+{'loss': 0.1199, 'grad_norm': 0.04139820486307144, 'learning_rate': 0.0001282747603833866, 'epoch': 0.72}
+{'loss': 0.1255, 'grad_norm': 0.04584073647856712, 'learning_rate': 0.00012667731629392972, 'epoch': 0.74}
+{'loss': 0.1213, 'grad_norm': 0.03656190633773804, 'learning_rate': 0.00012507987220447287, 'epoch': 0.75}
+{'loss': 0.1197, 'grad_norm': 0.03583957999944687, 'learning_rate': 0.00012348242811501597, 'epoch': 0.77}
+{'loss': 0.1291, 'grad_norm': 0.0482972115278244, 'learning_rate': 0.0001218849840255591, 'epoch': 0.78}
+{'loss': 0.1268, 'grad_norm': 0.04426395148038864, 'learning_rate': 0.00012028753993610224, 'epoch': 0.8}
+{'loss': 0.1227, 'grad_norm': 0.036313388496637344, 'learning_rate': 0.00011869009584664536, 'epoch': 0.82}
+{'loss': 0.1281, 'grad_norm': 0.03614654019474983, 'learning_rate': 0.00011709265175718851, 'epoch': 0.83}
+{'loss': 0.1276, 'grad_norm': 0.041432902216911316, 'learning_rate': 0.00011549520766773163, 'epoch': 0.85}
+{'loss': 0.1306, 'grad_norm': 0.054052144289016724, 'learning_rate': 0.00011389776357827477, 'epoch': 0.86}
+{'loss': 0.1172, 'grad_norm': 0.04127110540866852, 'learning_rate': 0.0001123003194888179, 'epoch': 0.88}
+{'loss': 0.1363, 'grad_norm': 0.036218881607055664, 'learning_rate': 0.00011070287539936102, 'epoch': 0.9}
+{'loss': 0.1221, 'grad_norm': 0.042277418076992035, 'learning_rate': 0.00010910543130990417, 'epoch': 0.91}
+{'loss': 0.1251, 'grad_norm': 0.04434940218925476, 'learning_rate': 0.00010750798722044728, 'epoch': 0.93}
+{'loss': 0.126, 'grad_norm': 0.034970708191394806, 'learning_rate': 0.00010591054313099043, 'epoch': 0.94}
+{'loss': 0.1167, 'grad_norm': 0.037158891558647156, 'learning_rate': 0.00010431309904153355, 'epoch': 0.96}
+{'loss': 0.1291, 'grad_norm': 0.03745673969388008, 'learning_rate': 0.00010271565495207669, 'epoch': 0.97}
+{'loss': 0.1223, 'grad_norm': 0.04053658992052078, 'learning_rate': 0.00010111821086261981, 'epoch': 0.99}
+{'loss': 0.1264, 'grad_norm': 0.04153404384851456, 'learning_rate': 9.952076677316294e-05, 'epoch': 1.01}
+{'loss': 0.1235, 'grad_norm': 0.03959665820002556, 'learning_rate': 9.792332268370608e-05, 'epoch': 1.02}
+{'loss': 0.1211, 'grad_norm': 0.04593098163604736, 'learning_rate': 9.63258785942492e-05, 'epoch': 1.04}
+{'loss': 0.1265, 'grad_norm': 0.04269411042332649, 'learning_rate': 9.472843450479234e-05, 'epoch': 1.05}
+{'loss': 0.1254, 'grad_norm': 0.04397907108068466, 'learning_rate': 9.313099041533548e-05, 'epoch': 1.07}
+{'loss': 0.1183, 'grad_norm': 0.04261883720755577, 'learning_rate': 9.15335463258786e-05, 'epoch': 1.09}
+{'loss': 0.1203, 'grad_norm': 0.04117167368531227, 'learning_rate': 8.993610223642172e-05, 'epoch': 1.1}
+{'loss': 0.1118, 'grad_norm': 0.04841507598757744, 'learning_rate': 8.833865814696486e-05, 'epoch': 1.12}
+{'loss': 0.1251, 'grad_norm': 0.05162009596824646, 'learning_rate': 8.6741214057508e-05, 'epoch': 1.13}
+{'loss': 0.1221, 'grad_norm': 0.039055097848176956, 'learning_rate': 8.514376996805112e-05, 'epoch': 1.15}
+{'loss': 0.1219, 'grad_norm': 0.038139600306749344, 'learning_rate': 8.354632587859425e-05, 'epoch': 1.17}
+{'loss': 0.119, 'grad_norm': 0.04753672704100609, 'learning_rate': 8.194888178913739e-05, 'epoch': 1.18}
+{'loss': 0.1293, 'grad_norm': 0.048946563154459, 'learning_rate': 8.035143769968051e-05, 'epoch': 1.2}
+{'loss': 0.1177, 'grad_norm': 0.04278728365898132, 'learning_rate': 7.875399361022364e-05, 'epoch': 1.21}
+{'loss': 0.1229, 'grad_norm': 0.046726103872060776, 'learning_rate': 7.715654952076677e-05, 'epoch': 1.23}
+{'loss': 0.1235, 'grad_norm': 0.05395743250846863, 'learning_rate': 7.555910543130991e-05, 'epoch': 1.25}
+{'loss': 0.1243, 'grad_norm': 0.04992886260151863, 'learning_rate': 7.396166134185304e-05, 'epoch': 1.26}
+{'loss': 0.1232, 'grad_norm': 0.04365503042936325, 'learning_rate': 7.236421725239617e-05, 'epoch': 1.28}
+{'loss': 0.1215, 'grad_norm': 0.05213708430528641, 'learning_rate': 7.07667731629393e-05, 'epoch': 1.29}
+{'loss': 0.1148, 'grad_norm': 0.04649743437767029, 'learning_rate': 6.916932907348244e-05, 'epoch': 1.31}
+{'loss': 0.1197, 'grad_norm': 0.04342585429549217, 'learning_rate': 6.757188498402556e-05, 'epoch': 1.33}
+{'loss': 0.1183, 'grad_norm': 0.038179244846105576, 'learning_rate': 6.597444089456869e-05, 'epoch': 1.34}
+{'loss': 0.124, 'grad_norm': 0.04560172185301781, 'learning_rate': 6.437699680511182e-05, 'epoch': 1.36}
+{'loss': 0.1235, 'grad_norm': 0.04964372515678406, 'learning_rate': 6.277955271565496e-05, 'epoch': 1.37}
+{'loss': 0.1214, 'grad_norm': 0.04980461299419403, 'learning_rate': 6.118210862619808e-05, 'epoch': 1.39}
+{'loss': 0.115, 'grad_norm': 0.044049788266420364, 'learning_rate': 5.958466453674122e-05, 'epoch': 1.41}
+{'loss': 0.1133, 'grad_norm': 0.042757317423820496, 'learning_rate': 5.7987220447284354e-05, 'epoch': 1.42}
+{'loss': 0.1188, 'grad_norm': 0.04400494322180748, 'learning_rate': 5.6389776357827484e-05, 'epoch': 1.44}
+{'loss': 0.1196, 'grad_norm': 0.04899273067712784, 'learning_rate': 5.479233226837061e-05, 'epoch': 1.45}
+{'loss': 0.1184, 'grad_norm': 0.04923180118203163, 'learning_rate': 5.3194888178913736e-05, 'epoch': 1.47}
+{'loss': 0.1154, 'grad_norm': 0.04409048333764076, 'learning_rate': 5.159744408945687e-05, 'epoch': 1.49}
+{'loss': 0.1167, 'grad_norm': 0.05046411603689194, 'learning_rate': 5e-05, 'epoch': 1.5}
+{'loss': 0.1229, 'grad_norm': 0.046235062181949615, 'learning_rate': 4.840255591054313e-05, 'epoch': 1.52}
+{'loss': 0.1142, 'grad_norm': 0.06493164598941803, 'learning_rate': 4.680511182108626e-05, 'epoch': 1.53}
+{'loss': 0.1151, 'grad_norm': 0.04519805312156677, 'learning_rate': 4.520766773162939e-05, 'epoch': 1.55}
+{'loss': 0.1128, 'grad_norm': 0.048331160098314285, 'learning_rate': 4.361022364217253e-05, 'epoch': 1.57}
+{'loss': 0.1193, 'grad_norm': 0.04520821571350098, 'learning_rate': 4.201277955271566e-05, 'epoch': 1.58}
+{'loss': 0.1135, 'grad_norm': 0.047359973192214966, 'learning_rate': 4.041533546325879e-05, 'epoch': 1.6}
+{'loss': 0.1267, 'grad_norm': 0.051909491419792175, 'learning_rate': 3.8817891373801916e-05, 'epoch': 1.61}
+{'loss': 0.118, 'grad_norm': 0.05516117811203003, 'learning_rate': 3.722044728434505e-05, 'epoch': 1.63}
+{'loss': 0.1124, 'grad_norm': 0.044445838779211044, 'learning_rate': 3.562300319488818e-05, 'epoch': 1.65}
+{'loss': 0.1148, 'grad_norm': 0.047700170427560806, 'learning_rate': 3.402555910543131e-05, 'epoch': 1.66}
+{'loss': 0.1221, 'grad_norm': 0.05004572123289108, 'learning_rate': 3.242811501597444e-05, 'epoch': 1.68}
+{'loss': 0.1161, 'grad_norm': 0.04981271177530289, 'learning_rate': 3.083067092651757e-05, 'epoch': 1.69}
+{'loss': 0.1122, 'grad_norm': 0.050071023404598236, 'learning_rate': 2.9233226837060707e-05, 'epoch': 1.71}
+{'loss': 0.1192, 'grad_norm': 0.0473821647465229, 'learning_rate': 2.7635782747603834e-05, 'epoch': 1.73}
+{'loss': 0.122, 'grad_norm': 0.03811733424663544, 'learning_rate': 2.6038338658146967e-05, 'epoch': 1.74}
+{'loss': 0.1201, 'grad_norm': 0.051693595945835114, 'learning_rate': 2.44408945686901e-05, 'epoch': 1.76}
+{'loss': 0.1207, 'grad_norm': 0.04528583958745003, 'learning_rate': 2.284345047923323e-05, 'epoch': 1.77}
+{'loss': 0.1229, 'grad_norm': 0.04809381440281868, 'learning_rate': 2.124600638977636e-05, 'epoch': 1.79}
+{'loss': 0.1228, 'grad_norm': 0.0423584021627903, 'learning_rate': 1.964856230031949e-05, 'epoch': 1.81}
+{'loss': 0.1194, 'grad_norm': 0.055846039205789566, 'learning_rate': 1.805111821086262e-05, 'epoch': 1.82}
+{'loss': 0.117, 'grad_norm': 0.047921109944581985, 'learning_rate': 1.645367412140575e-05, 'epoch': 1.84}
+{'loss': 0.1237, 'grad_norm': 0.054378967732191086, 'learning_rate': 1.485623003194888e-05, 'epoch': 1.85}
+{'loss': 0.1194, 'grad_norm': 0.04644308611750603, 'learning_rate': 1.3258785942492014e-05, 'epoch': 1.87}
+{'loss': 0.1223, 'grad_norm': 0.051489125937223434, 'learning_rate': 1.1661341853035145e-05, 'epoch': 1.89}
+{'loss': 0.1272, 'grad_norm': 0.0443466380238533, 'learning_rate': 1.0063897763578276e-05, 'epoch': 1.9}
+{'loss': 0.1121, 'grad_norm': 0.04039420932531357, 'learning_rate': 8.466453674121406e-06, 'epoch': 1.92}
+{'loss': 0.1143, 'grad_norm': 0.05466316267848015, 'learning_rate': 6.869009584664538e-06, 'epoch': 1.93}
+{'loss': 0.1185, 'grad_norm': 0.04915708675980568, 'learning_rate': 5.2715654952076674e-06, 'epoch': 1.95}
+{'loss': 0.1135, 'grad_norm': 0.050028689205646515, 'learning_rate': 3.6741214057507987e-06, 'epoch': 1.97}
+{'loss': 0.1114, 'grad_norm': 0.041089240461587906, 'learning_rate': 2.0766773162939296e-06, 'epoch': 1.98}
+{'loss': 0.1231, 'grad_norm': 0.05315922573208809, 'learning_rate': 4.792332268370607e-07, 'epoch': 2.0}
+{'train_runtime': 7654.9745, 'train_samples_per_second': 5.231, 'train_steps_per_second': 0.327, 'train_loss': 0.1379110803143285, 'epoch': 2.0}
+100%|██████████████████████████████████████████████████████████████████████| 2504/2504 [2:07:34<00:00,  3.06s/it]
+
+
+
+(codealpaca) root@instance-l7iadj57:/modeldata/test# python3 bijiao.py
+================================================================================
+Base Model (CodeLlama-7b-hf)
+================================================================================
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards: 100%|███████████████████████████████████████████████████| 2/2 [00:02<00:00,  1.31s/it]
+You are helping a backend engineer clean up user-uploaded paths.
+
+Problem:
+Users upload file paths that may contain redundant separators, ".", or "..".
+These paths are NOT file system paths and must be processed purely as strings.
+
+Task:
+Write a Python function normalize_path(path: str) -> str that:
+
+- Removes redundant slashes
+- Resolves "." and ".." correctly
+- Preserves whether the path is absolute or relative
+- Never allows ".." to escape above the root for absolute paths
+
+Notes:
+- This is NOT os.path.normpath
+- Do NOT import any library
+- The result must be deterministic and safe for production use
+
+Return only the function implementation.
+
+Example:
+
+normalize_path("a/b/c/../d") == "a/b/d"
+normalize_path("a/b/c/../../d") == "a/d"
+normalize_path("a/b/c/../../../d") == "d"
+normalize_path("a/b/c/../../../../d") == "../d"
+normalize_path("a/b/c/../../../../../d") == "../../d"
+normalize_path("a/b/c/../../../../../../d") == "../../../d"
+normalize_path("a/b/c/../../../../../../../d") == "../../../../d"
+normalize_path("a/b/c/../../../../../../../../d") == "../../../../../d"
+normalize_path("a/b/c/../../../../../../../../../d") == "../../../../../../d"
+normalize_path("a/b/c/../../../../../../../../../../d") == "../../../../../../../d"
+normalize_path("a/b/c/../../../../../../../../../../../d")
+
+has_function        : False
+has_placeholder     : False
+has_explanation     : False
+uses_import         : True
+follows_task        : False
+================================================================================
+QLoRA Model (Code Alpaca)
+================================================================================
+Loading checkpoint shards: 100%|███████████████████████████████████████████████████| 2/2 [00:02<00:00,  1.28s/it]
+You are helping a backend engineer clean up user-uploaded paths.
+
+Problem:
+Users upload file paths that may contain redundant separators, ".", or "..".
+These paths are NOT file system paths and must be processed purely as strings.
+
+Task:
+Write a Python function normalize_path(path: str) -> str that:
+
+- Removes redundant slashes
+- Resolves "." and ".." correctly
+- Preserves whether the path is absolute or relative
+- Never allows ".." to escape above the root for absolute paths
+
+Notes:
+- This is NOT os.path.normpath
+- Do NOT import any library
+- The result must be deterministic and safe for production use
+
+Return only the function implementation.
+
+Example:
+
+def normalize_path(path: str) -> str:
+    # TODO
+    return normalized_path
+
+# Test
+assert normalize_path("//foo/bar//baz/..") == "/foo/bar"
+assert normalize_path("foo/bar/../baz") == "foo/baz"
+assert normalize_path("foo/bar/../baz/../qux") == "foo/qux"
+assert normalize_path("foo/bar/../baz/../qux/..") == "foo"
+assert normalize_path("foo/bar/../baz/../qux/../") == "foo"
+assert normalize_path("foo/bar/../baz/../qux/../../") == ""
+assert normalize_path("foo/bar/../baz/../qux/../../..") == ""
+assert normalize_path("foo/bar/../baz/../qux/../../../") == ""
+assert normalize_path("foo/bar/../baz/../qux/../../../../") == ""
+assert normalize_path("foo/bar/../baz/../qux
+
+has_function        : True
+has_placeholder     : False
+has_explanation     : False
+uses_import         : True
+follows_task        : True
+
+================================================================================
+Summary Comparison
+================================================================================
+has_function         | Base: False | QLoRA: True
+has_placeholder      | Base: False | QLoRA: False
+has_explanation      | Base: False | QLoRA: False
+uses_import          | Base: True | QLoRA: True
+follows_task         | Base: False | QLoRA: True
